@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://krasie.github.io/"/>
-  <updated>2017-11-21T07:50:33.129Z</updated>
+  <updated>2017-11-21T09:02:44.664Z</updated>
   <id>http://krasie.github.io/</id>
   
   <author>
@@ -21,13 +21,16 @@
     <link href="http://krasie.github.io/2017/11/04/charles-https/"/>
     <id>http://krasie.github.io/2017/11/04/charles-https/</id>
     <published>2017-11-04T07:27:50.000Z</published>
-    <updated>2017-11-21T07:50:33.129Z</updated>
+    <updated>2017-11-21T09:02:44.664Z</updated>
     
-    <content type="html"><![CDATA[<p>10分钟学会使用 Charles。</p><a id="more"></a><h4 id="Charles-安装"><a href="#Charles-安装" class="headerlink" title="Charles 安装"></a>Charles 安装</h4><p>官网下载安装Charles:<br><a href="https://www.charlesproxy.com/download/" target="_blank" rel="noopener">https://www.charlesproxy.com/download/</a></p><h4 id="HTTP-抓包"><a href="#HTTP-抓包" class="headerlink" title="HTTP 抓包"></a>HTTP 抓包</h4><p>安装后启动 Charles。手机设置代理为 Charles 的 ip ，默认端口为 8888 ,可以自己修改。</p><h4 id="HTTPS-抓包"><a href="#HTTPS-抓包" class="headerlink" title="HTTPS 抓包"></a>HTTPS 抓包</h4><h6 id="安装-SSL-证书到手机设备"><a href="#安装-SSL-证书到手机设备" class="headerlink" title="安装 SSL 证书到手机设备"></a>安装 SSL 证书到手机设备</h6><ol><li>点击 Help -&gt; SSL Proxying -&gt; Install Charles Root Certificate on a Mobile Device</li><li>在手机Safari浏览器输入地址 chls.pro/ssl，出现证书安装页面，点击安装<br>手机设置有密码的输入密码进行安装</li></ol><p><code>注意：iOS 10.3系统，需要在 设置→通用→关于本机→证书信任设置 里面启用完全信任Charles证书</code></p><h6 id="Charles-设置-Proxy"><a href="#Charles-设置-Proxy" class="headerlink" title="Charles 设置 Proxy"></a>Charles 设置 Proxy</h6><ol><li>在 Charles 打开 Proxy -&gt; SSL Proxying Settings…</li><li>勾选 Enable SSL Proxying ,点击 Add 添加域名，端口填写 443</li></ol>]]></content>
+    <content type="html"><![CDATA[<h4 id="Charles-安装"><a href="#Charles-安装" class="headerlink" title="Charles 安装"></a>Charles 安装</h4><p>官网下载安装Charles:<br><a href="https://www.charlesproxy.com/download/" target="_blank" rel="noopener">https://www.charlesproxy.com/download/</a></p><h4 id="HTTP-抓包"><a href="#HTTP-抓包" class="headerlink" title="HTTP 抓包"></a>HTTP 抓包</h4><p>安装后启动 Charles。手机设置代理为 Charles 的 ip ，默认端口为 8888 ,可以自己修改。</p><h4 id="HTTPS-抓包"><a href="#HTTPS-抓包" class="headerlink" title="HTTPS 抓包"></a>HTTPS 抓包</h4><h6 id="安装-SSL-证书到手机设备"><a href="#安装-SSL-证书到手机设备" class="headerlink" title="安装 SSL 证书到手机设备"></a>安装 SSL 证书到手机设备</h6><ol><li>点击 Help -&gt; SSL Proxying -&gt; Install Charles Root Certificate on a Mobile Device</li><li>在手机Safari浏览器输入地址 chls.pro/ssl，出现证书安装页面，点击安装<br>手机设置有密码的输入密码进行安装</li></ol><p><code>注意：iOS 10.3系统，需要在 设置→通用→关于本机→证书信任设置 里面启用完全信任Charles证书</code></p><h6 id="Charles-设置-Proxy"><a href="#Charles-设置-Proxy" class="headerlink" title="Charles 设置 Proxy"></a>Charles 设置 Proxy</h6><ol><li>在 Charles 打开 Proxy -&gt; SSL Proxying Settings…</li><li>勾选 Enable SSL Proxying ,点击 Add 添加域名，端口填写 443</li></ol>]]></content>
     
     <summary type="html">
     
-      &lt;p&gt;10分钟学会使用 Charles。&lt;/p&gt;
+      
+      
+        &lt;h4 id=&quot;Charles-安装&quot;&gt;&lt;a href=&quot;#Charles-安装&quot; class=&quot;headerlink&quot; title=&quot;Charles 安装&quot;&gt;&lt;/a&gt;Charles 安装&lt;/h4&gt;&lt;p&gt;官网下载安装Charles:&lt;br&gt;&lt;a href=&quot;https://www
+      
     
     </summary>
     
