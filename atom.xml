@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://krasie.github.io/"/>
-  <updated>2017-11-21T09:02:44.664Z</updated>
+  <updated>2018-09-25T08:26:22.808Z</updated>
   <id>http://krasie.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mac 使用 brew 安装 dnsmasq</title>
+    <link href="http://krasie.github.io/2017/12/21/brew-install-dnsmasq/"/>
+    <id>http://krasie.github.io/2017/12/21/brew-install-dnsmasq/</id>
+    <published>2017-12-21T05:14:01.000Z</published>
+    <updated>2018-09-25T08:26:22.808Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="不要更改-etc-hosts-文件"><a href="#不要更改-etc-hosts-文件" class="headerlink" title="不要更改 /etc/hosts 文件"></a>不要更改 /etc/hosts 文件</h1><blockquote><p>要设置您的计算机使用 *.test 域名，例如 project.test，awesome.test 等，而不必每次都修改 host 文件。</p></blockquote><h2 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h2><ul><li>macOS Sierra</li><li><a href="http://mxcl.github.io/homebrew/" target="_blank" rel="noopener">Homebrew</a></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install dnsmasq</span><br></pre></td></tr></table></figure><h2 id="设置"><a href="#设置" class="headerlink" title="设置"></a>设置</h2><h3 id="创建配置目录"><a href="#创建配置目录" class="headerlink" title="创建配置目录"></a>创建配置目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mkdir -pv $(brew --prefix)/etc/</span><br></pre></td></tr></table></figure><h3 id="设置重定向-test"><a href="#设置重定向-test" class="headerlink" title="设置重定向 *.test"></a>设置重定向 *.test</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">echo &apos;address=/.dev/127.0.0.1&apos; &gt; $(brew --prefix)/etc/dnsmasq.conf</span><br></pre></td></tr></table></figure><p>You should probably add <code>strict-order</code> to <code>dnsmasq.conf</code> to keep nameserver order of <code>resolv.conf</code> (<a href="https://gist.github.com/drye/5387341" target="_blank" rel="noopener">see here</a>).</p><h2 id="设置自动启动"><a href="#设置自动启动" class="headerlink" title="设置自动启动"></a>设置自动启动</h2><h3 id="设置开机启动"><a href="#设置开机启动" class="headerlink" title="设置开机启动"></a>设置开机启动</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo cp -v $(brew --prefix dnsmasq)/homebrew.mxcl.dnsmasq.plist /Library/LaunchDaemons</span><br></pre></td></tr></table></figure><h3 id="加载"><a href="#加载" class="headerlink" title="加载"></a>加载</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo launchctl load -w /Library/LaunchDaemons/homebrew.mxcl.dnsmasq.plist</span><br></pre></td></tr></table></figure><h2 id="添加到解析"><a href="#添加到解析" class="headerlink" title="添加到解析"></a>添加到解析</h2><h3 id="创建解析目录"><a href="#创建解析目录" class="headerlink" title="创建解析目录"></a>创建解析目录</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mkdir -v /etc/resolver</span><br></pre></td></tr></table></figure><h3 id="把域名添加到解析"><a href="#把域名添加到解析" class="headerlink" title="把域名添加到解析"></a>把域名添加到解析</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo bash -c &apos;echo &quot;nameserver 127.0.0.1&quot; &gt; /etc/resolver/dev&apos;</span><br></pre></td></tr></table></figure><h2 id="设置系统-DNS"><a href="#设置系统-DNS" class="headerlink" title="设置系统 DNS"></a>设置系统 DNS</h2><p>把 127.0.0.1 设为最高优先级。</p><h2 id="完成"><a href="#完成" class="headerlink" title="完成"></a>完成</h2><p>你可以使用 <code>scutil --dns</code> 命令查看你的全部解析。</p><blockquote><p>以后可以直接再 nginx 使用 *.test 域名即可，默认指向 127.0.0.1。不需再修改 /etc/hosts 文件。</p></blockquote>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;不要更改-etc-hosts-文件&quot;&gt;&lt;a href=&quot;#不要更改-etc-hosts-文件&quot; class=&quot;headerlink&quot; title=&quot;不要更改 /etc/hosts 文件&quot;&gt;&lt;/a&gt;不要更改 /etc/hosts 文件&lt;/h1&gt;&lt;blockquote
+      
+    
+    </summary>
+    
+      <category term="技术" scheme="http://krasie.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="技术" scheme="http://krasie.github.io/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>使用 Charles 抓取手机 https</title>
